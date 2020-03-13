@@ -28,12 +28,6 @@ public class PostsApiControllerTest {
     @Autowired
     private PostsRepository postsRepository;
 
-    public PostsApiControllerTest(int port, TestRestTemplate restTemplate, PostsRepository postsRepository) {
-        this.port = port;
-        this.restTemplate = restTemplate;
-        this.postsRepository = postsRepository;
-    }
-
     @After
     public void tearDown() throws  Exception{
         postsRepository.deleteAll();
